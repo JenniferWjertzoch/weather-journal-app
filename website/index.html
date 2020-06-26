@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Todo List in Javascript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Weather Journal</h1>
+        <div class="main-area"></div>
+        <form class="form" data-element="form">
+            <p class="error-text" id="error-text" data-element="errorText">Please fill in all fields❗</p>
+            <label for="zip">Enter your zip code here:</label>
+            <input type="text" id="zip" data-element="zip" placeholder="Enter Zip Code" name="zipCode" required>
+
+            <label for="country">Select your country code here:</label>
+            <select id="country" required>
+                <option value=",de">Germany</option>
+                <option value=",us">United States</option>
+            </select>
+
+            <label for="feelings">How are you feeling today?</label>
+            <textarea class="myInput" id="feelings" data-element="feelings" placeholder="Add your feelings here!" rows="4" maxlength="25" required></textarea>
+
+            <button type="button" class="generate-btn" id="generate" data-element="generate-btn">GO</button>
+        </form>
+
+        <div class="resultCard entry" data-element="resultCard">
+            <h3 id="name"></h3>
+            <span>Date of entry:</span>
+            <h3 id="date"></h3>
+            <span>Temperature:</span>
+            <h3 id="temp"></h3>
+            <span>I am feeling:</span>
+            <h3 id="content"></h3>
+            <button type="button" class="refresh-btn" id="refresh-btn" data-element="refresh-btn">GO BACK</button>
+        </div>
+    </main>
+
+    <script src="app.js" type="text/javascript"></script>
+    <script src="modal.js" type="text/javascript"></script>
+</body>
+</html>
